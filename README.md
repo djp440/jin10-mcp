@@ -2,7 +2,30 @@
 
 [English](README.en.md) | [中文](README.md)
 
-基于 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 的金十财经数据客户端，提供行情报价、K线、快讯、资讯搜索和财经日历等能力。
+基于 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) 的金十财经数据客户端与 Agent Skill，提供行情报价、K线、快讯、资讯搜索和财经日历等能力。
+
+## Features
+
+- 标准 MCP 协议工作流
+- 实时报价（Quote）
+- K线数据（Kline）
+- 财经快讯（Flash News）
+- 财经资讯搜索（News Search）
+- 财经日历（Economic Calendar）
+- Agent Skill / SkillsMP 兼容
+
+## SkillsMP Compatibility
+
+本仓库包含标准 `SKILL.md`，可作为 Agent Skill 被 MCP / AI Agent / SkillsMP 等工具索引与使用。
+
+推荐 Topics：
+
+- `skill-md`
+- `skillsmp`
+- `agent-skill`
+- `mcp`
+- `finance`
+- `jin10`
 
 ## 快速开始
 
