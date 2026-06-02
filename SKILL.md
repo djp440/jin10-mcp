@@ -1,9 +1,32 @@
 ---
 name: jin10-mcp
-description: 通过标准 MCP 流程接入金十财经数据服务，查询行情、K线、快讯、资讯与财经日历。Use when 用户提到金十、Jin10、财经数据、MCP、Bearer Token、行情报价、K线、快讯、资讯搜索、财经日历，或需要按 initialize/initialized/tools-list/resources-list/tools-call 的标准协议访问该服务。
+description: Agent Skill for Jin10 MCP. Use this skill when users need Jin10 financial market data via MCP, including quotes, K-line data, flash news, article search, and economic calendar. 通过标准 MCP 流程接入金十财经数据服务，查询行情、K线、快讯、资讯与财经日历。适用于用户提到金十、Jin10、财经数据、MCP、Bearer Token、行情报价、K线、快讯、资讯搜索或财经日历等场景。
+license: MIT
+language: zh-CN
+keywords:
+  - jin10
+  - mcp
+  - finance
+  - market-data
+  - trading
+  - agent-skill
+  - skillsmp
 ---
 
 # Jin10 MCP
+
+## What This Skill Does
+
+该 Skill 提供基于 MCP（Model Context Protocol）的金十财经数据访问能力，包括：
+
+- 实时报价（Quote）
+- K线数据（Kline）
+- 财经快讯（Flash News）
+- 财经资讯搜索（News Search）
+- 财经日历（Economic Calendar）
+- MCP 标准协议工作流示例
+
+适用于量化、交易、金融 Agent、研究助手等场景。
 
 ## Quick Start
 
@@ -58,4 +81,19 @@ node scripts/jin10-mcp-client.mjs search-news 美联储
 - `article <id>`
 - `calendar`
 
-更多例子见 [EXAMPLES.md](EXAMPLES.md)。
+## Usage Guidance
+
+推荐优先通过 MCP 标准能力发现流程访问服务，而不是硬编码工具名。
+
+建议：
+
+- 先调用 `tools/list`
+- 再动态选择工具
+- 优先解析 `structuredContent`
+- 对分页接口统一处理 `cursor`
+
+## Related Files
+
+- `README.md` — 项目说明
+- `EXAMPLES.md` — 使用示例
+- `scripts/jin10-mcp-client.mjs` — MCP 客户端脚本
